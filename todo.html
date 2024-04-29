@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head> 
+     <title>To-Do List</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .ie-panel {
+            display: none;
+            background: #212121;
+            padding: 10px 0;
+            box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+            clear: both;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        html.ie-10 .ie-panel,
+        html.lt-ie-10 .ie-panel {
+            display: block;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-ui/jquery.ui.totop.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Web-Speech-API/0.3.1/web-speech-api.min.js"></script>
+  
+</head>
+  <body>
+    <!--preloader-->
+    <div class="preloader">
+        <div class="loader">
+          <div class="ball"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
+        </div>
+      </div>
+  
+      <div class="page">
+        
+        <div class="position-relative " style="margin-bottom: 5cm;">
+          <header class="section page-header" id="programs">
+            <!--RD Navbar-->
+            <div class="rd-navbar-wrap">
+              <nav class="rd-navbar rd-navbar-classic context-dark" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="10px" data-xl-stick-up-offset="10px" data-xxl-stick-up-offset="10px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+                <div class="rd-navbar-main-outer">
+                  <div class="rd-navbar-main">
+                    <!--RD Navbar Panel-->
+                    <div class="rd-navbar-panel">
+                      <!--RD Navbar Toggle-->
+                      <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                      <!--RD Navbar Brand-->
+                      <div class="rd-navbar-brand">
+<!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-363x100.png" alt="" width="181" height="50"/><img class="brand-logo-light" src="images/logo-default-363x100.png" alt="" width="181" height="50"/></a>                      </div>
+                    </div>
+                    <div class="rd-navbar-nav-wrap">
+                      <ul class="rd-navbar-nav">
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="file:///home/kaouther/Bureau/site/journal.html">Journal</a>
+                        </li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="file:///home/kaouther/Bureau/site/agenda.html">Agenda</a>
+                        </li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#">ToDo List</a>
+                        </li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="file:///home/kaouther/Bureau/site/Breathe.html">Respirez</a>
+                        </li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="file:///home/kaouther/Bureau/site/pomodoro.html">Pomodoro</a>
+                        </li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="file:///home/kaouther/Bureau/site/Articles.html">Articles</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </header>
+        
+        <div style="height: 2cm;"></div>
+  
+  
+        <!--  How it Works -->
+        <section class="section novi-bg novi-bg-img section-md-2 bg-default">
+          <div class="container">
+            <div class="text-center">
+              <h2> ToDo List Visualizer vos Taches</h2>
+              <h3>3 Avantages Majeur de cette methode:</h3>
+              </div>
+            <div class="row row-50 post-classic-counter justify-content-lg-between justify-content-center">
+              <div class="col-lg-4 col-sm-6">
+                <div class="post-classic novi-bg bg-secondary-1">
+                  <h3 class="post-classic-title"> Organisation efficace</h3>
+                  <p class="post-classic-text">Une liste de tâches vous permet de répertorier toutes vos activités à accomplir, 
+                    ce qui facilite leur suivi et leur gestion. Vous pouvez prioriser les tâches, 
+                    les classer par ordre d'importance et définir des échéances,
+                     ce qui contribue à une meilleure organisation de votre temps et de vos ressources.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <div class="post-classic novi-bg bg-secondary-2">
+                  <h3 class="post-classic-title">Productivité accrue</h3>
+                  <p class="post-classic-text">
+                      En ayant une vue claire de toutes les tâches à réaliser, vous êtes plus susceptible de rester concentré et de vous attaquer aux tâches les plus importantes en premier. Cela réduit le risque de procrastination et vous permet de rester productif tout au long de la journée.</p>
+              </div>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <div class="post-classic novi-bg bg-secondary-3">
+                  <h3 class="post-classic-title">Réduction du stress</h3>
+                  <p class="post-classic-text">
+                    L'utilisation d'une liste de tâches peut aider à réduire le stress lié à la gestion des activités quotidiennes. 
+                    En ayant un plan clair en place, vous avez moins de chances d'oublier des tâches importantes ou de vous sentir submergé par la quantité de travail à accomplir. Cela peut vous donner un sentiment de contrôle et de maîtrise, 
+                    ce qui contribue à votre bien-être général. </p>              
+              </div>
+            </div>
+          </div>
+        </section>
+  
+    <!--  To Do List Code -->
+          <section class="section novi-bg novi-bg-img section-md-2 bg-default">
+            <div id="todo-list-app">
+                <div id="container">
+            <!-- Confirmation All- dialog -->
+                <div id="custom-confirm-all" class="custom-confirm-all">
+                    <div class="confirm-content-all">
+                    <div>
+                        <i id="confirm-cancel-all" class="fas fa-times close-button"></i>
+                    </div>
+                    <h2>Confirmation</h2>
+                    <h6 id="confirm-msg-all">Etes Vous sur de supprimmer cette Tache?</h6>
+                    <button id="confirm-yes-all" class="btn btn-outline-success">Yes</button>
+                    <button id="confirm-no-all" class="btn btn-outline-danger">No</button>
+                    </div>
+                </div>
+
+            <!-- all dialogs code ends -->
+
+
+                <div class="section novi-bg novi-bg-img section-md-2 bg-secondary-1" >
+                <!-- main container -->
+                <div class="container">
+                    <h1 class="text-center titleText "><span id="element"></span></h1>
+                    
+                    <div class="container main mt-5 w-80 animate__animated  animate__fadeInDown animate__slow animate__delay-2s">
+                    <h3 class="text-center mb-4" id="maintitle">Ajoute tes taches ici:</h3>
+
+                    <!-- form components to add new task -->
+                    <form id="addForm" class="form-inline justify-content-between">
+                        <!-- task field -->
+                        <input class="form-control mr-2" type="text" onkeyup="enableSubmit(this, 'submitBtn')" id="item"
+                               placeholder="Titre de la tâche ..." style="flex-grow: 2;">
+                    
+                    <div style="height: 0.5cm;"></div>
+                        <!-- description field -->
+                        <textarea class="form-control mr-2" style="overflow-y: scroll; resize: none; width: 100%;" 
+                            placeholder="Ecrivez une description de cette tâche" id="description" required>
+                        </textarea>
+                            
+                    <div style="height: 1.5cm;"></div>
+                    
+                    
+                        <!-- Priority dropdown list -->
+                        <div class="col-md-6 center">
+                            <select id="priority" class="form-control">
+                                <option value="" selected disabled hidden>Définissez une Priorité</option>
+                                <option value="Low"class="bg-secondary-3" style="background:rgba(84, 211, 0, 0.605);">Basse</option>
+                                <option value="Medium" style="background:rgba(255, 225, 125, 0.788);">Moyenne</option>
+                                <option value="High" style="background:rgba(255, 120, 120, 0.786);">Élevée</option>
+                            </select>
+                        </div>
+                       
+                        <!-- Date button -->
+                        <div class="col-md-9">
+                            <input type="date" class="form-control mr-2" placeholder="Date"  id="dueDate" >
+                        </div>
+                    
+                        <!-- Add and Edit buttons -->
+                        <div class="col-md-3 d-flex justify-content-end">
+                            <input type="submit" class="btn btn-outline-success mr-2" id="submitBtn" value="Ajouter" disabled>
+                            <button id="editTask" class="btn btn-outline-primary" style="display: none;">Modifier</button>
+                        </div>
+                </form>
+
+                    <!-- form to display all tasks loaded from localstorage -->
+                    <div class="text-center">
+                        
+                    <div id="taskActions" style="display: none;">
+                        <h3 class="mt-4 text-center" id="heading-tasks"> Mes Taches</h3>
+                        <div class="search-container mb-3">
+                        <input type="text" id="searchBar" placeholder=" Rechercher des taches..."
+                            class="form-control w-75 mx-auto mt-3 inputcss">
+                        </div>
+                        <!-- sorting elements -->
+                        <div class="text-center">
+                    <div class="dropdown d-inline-block">
+                        <button class="btn btn-outline-dark dropbtn d-flex align-items-center ml-2" onclick="myFunction();">
+                            <ion-icon class="dropbtn" name="funnel-outline" style="font-size: 30px; margin-right: 6px"></ion-icon>
+                            Trier Par
+                            <ion-icon class="dropbtn center" name="chevron-down-outline" style="font-size: 20px; margin-left: 6px"></ion-icon>
+                        </button>
+                        <div id="myDropdown" class="dropdown-content ml-2 mt-0.5">
+                            <a onclick="sortByPriority('highToLow');" class="a1"> Priorité Élevée a Basse</a>
+                            <a onclick="sortByPriority('lowToHigh');" class="a2">Priorité Basse à Élevée</a>
+                            <a onclick="sortByDueDate('early');" class="a3">Plus Proche à faire</a>
+                            <a onclick="sortByDueDate('late');" class="a4">Plus Loin à faire</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                        <!--Dynamic Task list-->
+                        <div class="row justify-content-center mt-3">
+                            <div class="col-10 justify-content-center">
+                                <form id="newTaskForm" class="justify-content-center">
+                                    <ul class="list-group ul-todo justify-content-center" id="taskList"></ul>
+                                </form>
+                            </div>
+                        </div>
+                        <button id="clearAllTasks" class="btn btn-outline-danger clear_btn" onclick="clearAllTasks();">
+                        <span class="d-flex align-items-center">
+                            <ion-icon name="trash-outline" style="font-size: 20px; margin-right: 6px"></ion-icon>Clear All Tasks</span>
+                        </button>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div> 
+            </div>          
+</section>
+        
+
+      <!-- footer -->
+  <section class="footer-down">
+    <div>
+      <marquee width="100%" direction="left">Developed and Designed By <b>Les Innconus</b> | © All Rights Reserved
+        </marque>
+    </div>
+  </section>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
+   
+    <!-- loading all external/internal scripts for todo list -->
+  <script src="js/index.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <!--<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">-->
+  </script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var strings = ['To-Do List 📝', 'Organisez vos tâches, boostez votre productivité quotidienne ! 🚀.', 'Atteignez vos objectifs une tâche à la fois. 📃', 'Planifiez, agissez, atteignez : commencez maintenant ! 😉..'];
+
+    function startTypedAnimation() {
+      var typed = new Typed('#element', {
+        strings: strings,
+        typeSpeed: 50,
+        onComplete: function () {
+          typed.reset();
+          strings.push(strings.shift());
+        },
+      });
+    }
+
+    startTypedAnimation(); 
+  </script>
+
+   <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var taskList = document.getElementById('taskList');
+    var taskActions = document.getElementById('taskActions');
+    init();
+    
+    // Function to check and toggle the display of taskActions
+    function checkTasksAndToggle() {
+      if (taskList && taskList.children.length > 0) {
+        // At least one task is present, show the container
+        taskActions.style.display = 'block';
+      } else {
+        // No tasks, hide the container
+        taskActions.style.display = 'none';
+      }
+    }
+
+    // Check tasks initially
+    checkTasksAndToggle();
+
+    // Use MutationObserver to detect changes in the DOM
+    var observer = new MutationObserver(function (mutations) {
+      // Check tasks whenever the content of taskList changes
+      checkTasksAndToggle();
+    });
+
+    // Configure the observer to watch for changes in the child nodes of taskList
+    var observerConfig = { childList: true };
+
+    // Start observing
+    observer.observe(taskList, observerConfig);
+  });
+</script>
+
+
+      
+  </body>
+</html>
